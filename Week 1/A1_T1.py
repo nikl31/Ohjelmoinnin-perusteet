@@ -1,3 +1,3 @@
-msg= "Hello Python program!"
+msg= "Hello World!"
 print(msg)
 
