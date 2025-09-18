@@ -1,1 +1,9 @@
+task1 =input("Insert an integer: ")
+Value = int(task1)
+print(f"Value is {task1}")
+Remainder = int(Value/479)
+print(f"The remainder is {Remainder} when {Value} is divided by 2.")
+
+
+
 
