@@ -12,4 +12,4 @@ second = int(input("2) Ending point: "))
 third = int(input("3) Step size: "))
 complete = task1[first:second:third]
 print(f"The word '{task1}' sliced to the defined substring is '{complete}'.")
-print("Program ending.")
+print("Program ending.") 
