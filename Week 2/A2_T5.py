@@ -3,7 +3,7 @@ task1 =input("Insert a closed compound word: ")
 reverse = task1[::-1]
 print(f"The word you inserted is '{task1}' and in reverse it is '{reverse}'.")
 length = (len(task1))
-print(f"the inserted word length is {length}")
+print(f"The inserted word length is {length}")
 last = task1[-1]
 print(f"Last character is '{last}'")
 print("Take substring from the inserted word by inserting...")
