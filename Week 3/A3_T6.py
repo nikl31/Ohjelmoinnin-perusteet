@@ -26,3 +26,26 @@ if(choice == 1):
         print("Exiting...")
     else:
         print("Unknown option.")
+
+elif(choice == 2):
+    print("\nWeight options:")
+    print("1 - Grams to pounds")
+    print("2 - Pounds to grams")
+    print("0 - Exit")
+    choice2 = int(input("Your choice: "))
+    if choice2 == 1:
+        grams = float(input("Insert grams: "))
+        pounds = grams * 0.00220462
+        print(F"{grams:.1f} g is {pounds:.1f} lb")
+    elif choice2 == 2:
+        pounds = float(input("Insert pounds: "))
+        grams = pounds / 0.00220462
+        print(F"{pounds:.1f} lb is {gramd:.1f} g")
+    elif choice == 0:
+        print("Exiting...")
+    else:
+        print("Unknown option")
+elif choice == 0:
+    print("\nExiting...")
+
+print("\nProgram ending.")
