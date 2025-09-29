@@ -8,12 +8,12 @@ print("2 - Weight")
 print("0 - Exit")
 choice = int(input("Your choice: "))
 
-if(choice == 1):
+if choice == 1:
     print("\nLenght options:")
     print("1 - Meters to kilometers")
     print("2 - Kilometers to meters")
     print("0 - Exit")
-    choice2 = int(input("Insert meters: "))
+    choice2 = int(input("Your choice: "))
     if choice2 == 1:
         meters = float(input("Insert meters: "))
         kilometers = meters / 1000
@@ -27,7 +27,7 @@ if(choice == 1):
     else:
         print("Unknown option.")
 
-elif(choice == 2):
+elif choice == 2:
     print("\nWeight options:")
     print("1 - Grams to pounds")
     print("2 - Pounds to grams")
@@ -40,11 +40,11 @@ elif(choice == 2):
     elif choice2 == 2:
         pounds = float(input("Insert pounds: "))
         grams = pounds / 0.00220462
-        print(F"{pounds:.1f} lb is {gramd:.1f} g")
-    elif choice == 0:
+        print(F"{pounds:.1f} lb is {grams:.1f} g")
+    elif choice2 == 0:
         print("Exiting...")
     else:
-        print("Unknown option")
+        print("Unknown option.")
 elif choice == 0:
     print("\nExiting...")
 
