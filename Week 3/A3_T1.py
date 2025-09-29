@@ -1,7 +1,7 @@
 print("Program starting")
 print("Insert two integers.")
-Int1 = input("Insert first integer: ")
-Int2 = input("Insert second integer: ")
+Int1 = int(input("Insert first integer: "))
+Int2 = int(input("Insert second integer: "))
 print("Comparing inserted integers.")
 if(Int1 > Int2):
       print("First integer is greater.")
@@ -10,7 +10,7 @@ elif(Int2 > Int1):
 else:
       print("Integers are the same")
 print("")
-Sum = (Int1 + Int2)
+Sum = Int1 + Int2
 print(f"{Int1} + {Int2} = {Sum}")
 print("")
 Remainder = Sum % 2
