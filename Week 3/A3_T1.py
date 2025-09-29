@@ -10,7 +10,7 @@ elif(Int2 > Int1):
 else:
       print("Integers are the same")
 print("")
-Sum = Int1 + Int2
+Sum = (Int1 + Int2)
 print(f"{Int1} + {Int2} = {Sum}")
 print("")
 Remainder = Sum % 2
@@ -19,3 +19,4 @@ if(Remainder == 0):
 else:
      print("Sum is odd.")
 print("Program ending")
+
