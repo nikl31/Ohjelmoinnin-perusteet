@@ -7,7 +7,7 @@ if(Int1 > Int2):
       print("First integer is greater.")
 elif(Int2 > Int1):
       print("Second integer is greater.")
-elif (Int1 == Int2):
+else:
       print("Integers are the same")
 print("")
 Sum = Int1 + Int2
