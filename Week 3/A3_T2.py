@@ -14,3 +14,4 @@ elif(Word2 < Word1):
 else:
     print(f"Both inserted words are the same alphabetically, \"{Word1}\"")
 print("Program ending.")
+
