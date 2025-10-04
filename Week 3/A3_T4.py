@@ -9,11 +9,11 @@ print("3 - Print the first character")
 print("4 - Show the amount of characters in the name")
 print("0 - Exit")
 choice = int(input("Your choice: "))
-
+reverse = Name[::-1]
 if (choice == 1):
     print (f"Welcome {Name}!")
 elif(choice == 2):
-    print("Your name backwards is {NameBackwards}")
+    print("Your name backwards is '{reverse}'.")
 
 
 
