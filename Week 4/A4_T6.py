@@ -16,5 +16,3 @@ while n != 1:
 print(" -> ".join(sequence))
 print(f"Sequence had {steps} total steps.\n")
 print("Program ending.")
-
-
