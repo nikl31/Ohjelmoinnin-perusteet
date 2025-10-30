@@ -31,7 +31,7 @@ def main():
         print(line)
 
     print("\n#### Ciphered text ####")
-    filename = input("Insert filename to save (leave empty to just show): ")
+    filename = input("Insert filename to save: ")
 
     if filename.strip():
         with open(filename, "w", encoding="utf-8") as f:
@@ -39,7 +39,8 @@ def main():
                 f.write(line + "\n")
         print("Ciphered text saved!")
     else:
-        print("No file saved.")
+        print("File name not defined.")
+        print("Aborting save operation.")
 
     print("Program ending.")
 
