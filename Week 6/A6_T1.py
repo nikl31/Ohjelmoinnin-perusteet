@@ -3,7 +3,7 @@ def readFile(Filename):
     Content = ''
     Row = Filehandler.readline()
     while Row != '':
-        Content = Content + Row
+        Content += Row
         print(f"MIKÄ ROW ON TÄSSÄ KOHTAA: {Row}")
         print(f"MIKÄ IHMEEN CONTENT: {Content}")
         Row = Filehandler.readline()
@@ -15,9 +15,9 @@ def main() -> None:
     print("This program can read a file.")
     Filename = input("Insert filename: ")
     FileContent = readFile(Filename)
-    print(f"#### START {Filename} ####")
+    print("#### START {} ####".format(Filename))
 
-    print(f"#### END {Filename} ####")
+    print("#### END {} ####".format(Filename))
     return None
 
 if __name__ == "__main__":
