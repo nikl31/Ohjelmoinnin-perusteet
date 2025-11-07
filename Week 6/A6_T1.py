@@ -1,13 +1,13 @@
 def readFile(Filename):
-    Filehandler = open(Filename, 'r')
+    FileHandle = open(Filename, 'r')
     Content = ''
-    Row = Filehandler.readline()
+    Row = FileHandle.readline()
     while Row != '':
         Content += Row
         print(f"MIKÄ ROW ON TÄSSÄ KOHTAA: {Row}")
         print(f"MIKÄ IHMEEN CONTENT: {Content}")
-        Row = Filehandler.readline()
-    Filehandler.close()
+        Row = FileHandle.readline()
+    FileHandle.close()
     return Content
 
 def main() -> None:
