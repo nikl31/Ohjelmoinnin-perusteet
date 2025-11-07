@@ -1,18 +1,24 @@
-def main():
+def readFile(Filename):
+    Filehandler = open(Filename, 'r')
+    Content = ''
+    Row = Filehandler.readline()
+    while Row != '':
+        Content = Content + Row
+        print(f"MIKÄ ROW ON TÄSSÄ KOHTAA: {Row}")
+        print(f"MIKÄ IHMEEN CONTENT: {Content}")
+        Row = Filehandler.readline()
+    Filehandler.close()
+    return Content
+
+def main() -> None:
     print("Program starting.")
     print("This program can read a file.")
-    filename = input("Insert filename: ")
+    Filename = input("Insert filename: ")
+    FileContent = readFile(Filename)
+    print(f"#### START {Filename} ####")
 
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            print(f'#### START "{filename}" ####')
-            print(file.read(), end="")  # print file content without extra newlines
-            print(f'\n#### END "{filename}" ####')
-    except FileNotFoundError:
-        print(f'Error: File "{filename}" not found.')
-
-    print("Program ending.")
-
+    print(f"#### END {Filename} ####")
+    return None
 
 if __name__ == "__main__":
     main()
