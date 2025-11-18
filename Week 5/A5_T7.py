@@ -3,13 +3,13 @@ DELIMITER = ','
 def collectWords():
     words = []
     while True:
-        word = input("Insert word(empty stops): ")
+        word = input("Insert word(empty stops): ").strip()
         if word == "":
             break
         words.append(word)
     return DELIMITER.join(words)
 
-def analyseWords(words):
+def analyseWords(words_string):
     if not words_string:
         print("- 0 Words")
         print("- 0 Characters")
