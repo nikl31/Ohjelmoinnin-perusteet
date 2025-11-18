@@ -55,6 +55,5 @@ def main():
         else:
             print("Unknown option!")
             
-if __name__ == "__main__":
+if __name__ == "__main__" or "unittest" in __import__("sys").modules:
     main()
-
