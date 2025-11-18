@@ -1,15 +1,15 @@
 DELIMITER = ','
 
 def collectWords():
-    words = []
+    Cwords = []
     while True:
-        word = input("Insert word(empty stops): ").strip()
-        if word == "":
+        Cword = input("Insert word(empty stops): ")
+        if Cword == "":
             break
-        words.append(word)
-    return DELIMITER.join(words)
+        Cwords.append(Cword)
+    return DELIMITER.join(Cwords)
 
-def analyseWords(words_string):
+def analyseWords(Pwords):
     if not words_string:
         print("- 0 Words")
         print("- 0 Characters")
