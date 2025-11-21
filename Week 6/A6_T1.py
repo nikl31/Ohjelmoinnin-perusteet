@@ -1,11 +1,13 @@
+import os
+print("Current dir:", os.getcwd())
+print("Files here:", os.listdir())
+
 def readFile(Filename):
     FileHandle = open(Filename, 'r')
     Content = ''
     Row = FileHandle.readline()
     while Row != '':
         Content += Row
-        print(f"MIKÄ ROW ON TÄSSÄ KOHTAA: {Row}")
-        print(f"MIKÄ IHMEEN CONTENT: {Content}")
         Row = FileHandle.readline()
     FileHandle.close()
     return Content
