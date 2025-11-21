@@ -1,26 +1,21 @@
-import os
-print("Current dir:", os.getcwd())
-print("Files here:", os.listdir())
-
-def readFile(Filename):
-    FileHandle = open(Filename, 'r')
-    Content = ''
-    Row = FileHandle.readline()
-    while Row != '':
-        Content += Row
-        Row = FileHandle.readline()
-    FileHandle.close()
-    return Content
-
-def main() -> None:
+def main():
     print("Program starting.")
     print("This program can read a file.")
+    
     Filename = input("Insert filename: ")
-    FileContent = readFile(Filename)
-    print("#### START {} ####".format(Filename))
+    
+    try:
+        with open(Filename, "r") as file:
+            content = file.read()
+        
+        print(f'#### START "{Filename}" ####')
+        print(content)
+        print(f'#### END "{Filename}" ####')
+    
+    except FileNotFoundError:
+        print(f'file "{Filename}" not found!')
 
-    print("#### END {} ####".format(Filename))
-    return None
+    print("Program ending")
 
 if __name__ == "__main__":
     main()
