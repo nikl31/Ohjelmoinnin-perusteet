@@ -3,7 +3,7 @@
 # Developer First_name Last_name
 # Date 2025-11-23
 ########################################################
-
+ 
 def main():
     print("Program starting.\n")
     total = 0.0
