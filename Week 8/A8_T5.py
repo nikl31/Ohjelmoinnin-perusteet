@@ -1,70 +1,74 @@
-def showMainMenu():
+from loginLib import login, register, viewProfile, change_password
+
+def main() -> None:
+    print("Program starting.")
+    mainMenu()
+    print("Program ending.")
+
+def showOptions() -> None:
     print("Options:")
     print("1 - Login")
     print("2 - Register")
     print("0 - Exit")
 
-
-def showUserMenu():
+def showUserMenu() -> None:
     print("User menu:")
     print("1 - View profile")
-    print("2 - Change password (not implemented)")
+    print("2 - Change password")
     print("0 - Logout")
 
-
-def userSession(PUser: list[str]):
+def mainMenu() -> None:
     while True:
-        showUserMenu()
-        choice = input("Your choice: ")
+        showOptions()
+        try:
+            choice = askChoice()
+        except ValueError:
+            print("Invalid input. Please enter a number.\n")
+            continue
 
-        if choice == "0":
-            print("Logging out.\n")
-            return
-
-        elif choice == "1":
-            print(f"User ID: {PUser[0]}")
-            print(f"Username: {PUser[1]}\n")
-
-        elif choice == "2":
-            print("Password change not implemented.\n")
-
-        else:
-            print("Invalid option.\n")
-
-
-def main():
-    print("Program starting.")
-
-    while True:
-        showMainMenu()
-        choice = input("Your choice: ")
-
-        if choice == "0":
+        if choice == 0:
             print("Exiting program.\n")
             break
-
-        elif choice == "1":
-            username = input("Insert username: ")
-            password = input("Insert password: ")
-
-            logged = loginUser(username, password)
-            if logged is None:
-                print("Login failed.\n")
+        elif choice == 1:
+            username = askValue("username")
+            password = askValue("password")
+            if login(username, password):
+                print(f"Welcome {username}!\n")
+                userMenu(username)
             else:
-                print(f"Welcome {logged[1]}!\n")
-                userSession(logged)
-
-        elif choice == "2":
-            username = input("Insert username: ")
-            password = input("Insert password: ")
-            registerUser(username, password)
+                print("Login failed.\n")
+        elif choice == 2:
+            username = askValue("username")
+            password = askValue("password")
+            register(username, password)
             print("User registration completed!\n")
-
         else:
             print("Invalid option.\n")
 
-    print("Program ending.")
+def userMenu(PUsername: str) -> None:
+    while True:
+        showUserMenu()
+        try:
+            choice = askChoice()
+        except ValueError:
+            print("Invalid input. Please enter a number.\n")
+            continue
 
+        if choice == 0:
+            print("Logging out.\n")
+            break
+        elif choice == 1:
+            viewProfile(PUsername)
+        elif choice == 2:
+            change_password(PUsername)
+        else:
+            print("Invalid option.\n")
+
+def askChoice() -> int:
+    return int(input("Your choice: "))
+
+def askValue(PPrompt: str) -> str:
+    return input(f"Insert {PPrompt}: ")
 
 if __name__ == "__main__":
     main()
