@@ -31,7 +31,6 @@ def userSession(PUser: list[str]):
         else:
             print("Invalid option.\n")
 
-
 def main():
     print("Program starting.")
 
